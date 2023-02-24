@@ -1,0 +1,14 @@
+version: '3'
+services:
+  elasticsearch:
+    image: elasticsearch:7.9.0
+    ports:
+      - 9200:9200
+    environment:
+      discovery.type: 'single-node'
+  kibana:
+    image: kibana:7.9.0
+    volumes:
+      - ./kibana.yml:/usr/share/kibana/config/kibana.yml
+    ports:
+      - 5601:5601

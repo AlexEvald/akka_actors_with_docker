@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  demo:
+    image: demo:latest
+    container_name: demo
+    build:
+      context: .
+    restart: on-failure
+    ports:
+      - 8080:8080
+    volumes:
+      - /home/alex/dev/demo
+#      - "/etc/timezone:/etc/timezone:ro"
+#      - "/etc/localtime:/etc/localtime:ro"
