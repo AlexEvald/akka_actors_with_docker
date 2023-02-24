@@ -1,5 +1,6 @@
 package com.springdemo.helloworld.controllers;
 
+import com.springdemo.helloworld.domain.User;
 import com.springdemo.helloworld.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -19,9 +20,7 @@ public class UsersController {
 
     @GetMapping("/")
     public ResponseEntity<List<String>> loadAllUsers(){
-        List<String> allUsers = userRepository.findAll().stream().map(user -> {
-           return  user.getName();
-        }).collect(Collectors.toList());
+        List<String> allUsers = userRepository.findAll().stream().map(User::getName).collect(Collectors.toList());
         return ResponseEntity.ok(allUsers);
     }
 

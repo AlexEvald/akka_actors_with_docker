@@ -21,7 +21,7 @@ public class ActorUtils {
                 = system.actorOf(Props.create(MyActor.class), "my-actor");
 
         ActorRef readingActor = system.actorOf(
-                ReadingActor.props("Test 123 pame"), "readingActor");
+                ReadingActor.props("Test 123 "), "readingActor");
         readingActor.tell(ReadingActor.ReadLines.class,ActorRef.noSender());
 
     }

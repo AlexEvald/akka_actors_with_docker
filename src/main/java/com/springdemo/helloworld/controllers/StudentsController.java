@@ -34,7 +34,7 @@ public class StudentsController {
     @GetMapping("/time")
     public ResponseEntity<String> loadTime(){
         LocalDateTime localDateTime = LocalDateTime.now();
-        System.out.println("Gia na doume ti wra eiani :"+ localDateTime);
+        System.out.println("The Time for this is :"+ localDateTime);
 
         return ResponseEntity.ok("OK");
     }

@@ -106,19 +106,14 @@ public class HelloWorldController {
                 .peek(n -> logger.info("o arithmos mas einai {}",n))
                 .toList());
 
-        List<CallBack> collect = flatList.stream().map(n -> new CallBack() {
-            @Override
-            public void run(String n) {
-                logger.info("Callback ::::: o arithmos mas einai {}", n);
-            }
-        }).collect(Collectors.toList());
+        List<CallBack> collect = flatList.stream().map(n -> (CallBack) n12 -> logger.info("Callback ::::: the number is {}", n12)).toList();
 
         flatList.sort(Integer::compareTo);
 
         collect.forEach(n -> n.run(""));
 
 
-        callback.run("POUTSES !!!");
+        callback.run("Test test !!!");
 
         return "This is a Functional Programming test";
     }

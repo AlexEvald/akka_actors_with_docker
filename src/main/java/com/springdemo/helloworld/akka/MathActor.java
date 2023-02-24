@@ -10,13 +10,12 @@ public class MathActor extends AbstractActor {
 
     @Override
     public Receive createReceive() {
-        return receiveBuilder().match(Integer.class, s -> log.info("Prwti fora me noumeraki : "+ s))
+        return receiveBuilder().match(Integer.class, s -> log.info("First time with number : "+ s))
                 .match(Double.class, this::internatMethod)
                 .build();
     }
 
     public void internatMethod(Double number){
-//        System.out.println("Mesa stin methodo magka me numeraki : "+ number );
         log.info("Mesa stin methodo magka me numeraki : "+ number);
     }
 

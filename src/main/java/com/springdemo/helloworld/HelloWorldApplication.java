@@ -31,7 +31,6 @@ public class HelloWorldApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 
 		LocalDateTime localDateTime = LocalDateTime.now();
 		System.out.println("Gia na doume ti wra eiani :"+ localDateTime);

@@ -37,12 +37,11 @@ public class ActorController {
         mathActor.tell(x, ActorRef.noSender());
 
         ActorRef actorMine = akkaSystem.actorOf(ActorMine.props(),"moneActor");
-        actorMine.tell("POutsa mou ", ActorRef.noSender());
+        actorMine.tell("This is actorTest ", ActorRef.noSender());
         Double y = 76.4;
 
         actorMine.tell(y, ActorRef.noSender());
 
-        System.out.println("POMPAAAA ENA ENA ");
 
 
 

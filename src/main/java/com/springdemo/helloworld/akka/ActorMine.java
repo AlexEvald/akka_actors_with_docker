@@ -14,8 +14,8 @@ public class ActorMine extends AbstractActor {
     @Override
     public Receive createReceive() {
 
-        return receiveBuilder().match(String.class, s -> log.info("PpAME MWRI TRELA!!!! : "+ s))
-                .match(Double.class, s -> log.info("Prwti fora me noumeraki : "+ s))
+        return receiveBuilder().match(String.class, s -> log.info("Lets go : "+ s))
+                .match(Double.class, s -> log.info("First time with number : "+ s))
                 .build();
     }
 
