@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -91,7 +92,7 @@ public class HelloWorldController {
             }
         };
 
-        list1.sort((n1, n2) -> n1.compareTo(n2));
+        list1.sort(Comparator.naturalOrder());
 
         List<Integer> numbers1 = Arrays.asList(1, 2, 3);
         List<Integer> numbers2 = Arrays.asList(4, 5, 6);
