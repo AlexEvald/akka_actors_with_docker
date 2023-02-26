@@ -1,4 +1,4 @@
-package com.springdemo.helloworld;
+package com.springdemo.demo;
 
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
