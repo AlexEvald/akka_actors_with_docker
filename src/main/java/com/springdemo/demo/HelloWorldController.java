@@ -104,7 +104,7 @@ public class HelloWorldController {
 
         List<Integer> flatList = new java.util.ArrayList<>(listOfLists.stream()
                 .flatMap(Collection::stream)
-                .peek(n -> logger.info("o arithmos mas einai {}",n))
+                .peek(n -> logger.info("the number is {}",n))
                 .toList());
 
         List<CallBack> collect = flatList.stream().map(n -> (CallBack) n12 -> logger.info("Callback ::::: the number is {}", n12)).toList();

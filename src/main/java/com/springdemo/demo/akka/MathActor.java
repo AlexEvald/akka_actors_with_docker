@@ -16,7 +16,7 @@ public class MathActor extends AbstractActor {
     }
 
     public void internatMethod(Double number){
-        log.info("Mesa stin methodo magka me numeraki : "+ number);
+        log.info("inside the method with number : "+ number);
     }
 
     public static Props props(){
