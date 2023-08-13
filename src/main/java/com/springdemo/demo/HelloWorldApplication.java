@@ -1,7 +1,5 @@
 package com.springdemo.demo;
 
-//import org.slf4j.Logger;
-//import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -10,14 +8,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import java.time.LocalDateTime;
 
 
 @SpringBootApplication
 @EnableAutoConfiguration
 @EnableTransactionManagement
 public class HelloWorldApplication implements CommandLineRunner {
-//	Logger LOGGER = LoggerFactory.getLogger(HelloWorldApplication.class);
 
 
 	@Autowired
@@ -30,12 +26,5 @@ public class HelloWorldApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		LocalDateTime localDateTime = LocalDateTime.now();
-		System.out.println("Gia na doume ti wra eiani :"+ localDateTime);
-//			String sql = "INSERT INTO students (id,name,email) VALUES ('123','Alex', 'alex@gmail.com')";
-//			int rows = jdbcTemplate.update(sql);
-//			if(rows > 0 ){
-//				System.out.println("A new row has been insterted");
-//			}
 	}
 }
